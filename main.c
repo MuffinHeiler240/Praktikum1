@@ -23,10 +23,13 @@ int main(void) {
         c=a/b;
         printf("a=%f / b=%f = c=%f\n \n", a, b, c);
     }
+    /* Ergebnisse werden von double zu float zu int ungenauer! */
+    /* %f für float und double; %i für int */
+
 
 
     int n = 10;
-    int Numbers[n][4];
+    int Numbers[n][3];
 
     int i = 0;
     while(i < n) {
