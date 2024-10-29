@@ -26,13 +26,14 @@ int main(void) {
     /* Ergebnisse werden von double zu float zu int ungenauer! */
     /* %f für float und double; %i für int */
 
-
-
     int n = 10;
+    int start = 2;
+
     int Numbers[n][3];
 
     int i = 0;
-    while(i < n) {
+
+    while(i < n+start-1) {
         int num = i+1;
         Numbers[i][0] = num;
         Numbers[i][1] = num * num;
@@ -50,8 +51,8 @@ int main(void) {
     printf("n   | n*n | s(n) | q(n)\n");
     printf("----+-----+------+------\n");
 
-    int k;
-    for ( k = 0; k < n; k++) {
+    int k = start-1;
+    for (; k < n+start-1; k++) {
         printf("%3d | %4d| %4d | %4d\n", Numbers[k][0], Numbers[k][1], Numbers[k][2], Numbers[k][3]);
     }
     return 0;
