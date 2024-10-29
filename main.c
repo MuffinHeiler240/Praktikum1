@@ -26,34 +26,25 @@ int main(void) {
     /* Ergebnisse werden von double zu float zu int ungenauer! */
     /* %f für float und double; %i für int */
 
-    int n = 10;
-    int start = 2;
+    int steps = 10;
+    int start = 1;
 
-    int Numbers[n][3];
-
-    int i = 0;
-
-    while(i < n+start-1) {
-        int num = i+1;
-        Numbers[i][0] = num;
-        Numbers[i][1] = num * num;
-        if(i != 0) {
-            Numbers[i][2] = num + Numbers[i-1][2];
-            Numbers[i][3] = num * num + Numbers[i-1][3];
-        }
-        else {
-            Numbers[i][2] = 1;
-            Numbers[i][3] = 1;
-        }
-        i++;
-    }
+    int k ;
+    int kSqu;
+    int kSum = 0;
+    int kSquSum = 0;
 
     printf("n   | n*n | s(n) | q(n)\n");
     printf("----+-----+------+------\n");
 
-    int k = start-1;
-    for (; k < n+start-1; k++) {
-        printf("%3d | %4d| %4d | %4d\n", Numbers[k][0], Numbers[k][1], Numbers[k][2], Numbers[k][3]);
+    for (k=1; k < steps+start; k++) {
+
+        kSqu = k*k;
+        kSum += k;
+        kSquSum += kSqu;
+
+        if(k>=start)
+            printf("%3d | %4d| %4d | %4d\n", k, kSqu, kSum, kSquSum);
     }
     return 0;
 }
