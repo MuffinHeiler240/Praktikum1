@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_Praktikum1: phony || .
 
 build CMakeFiles/Praktikum1.dir/main.c.obj: C_COMPILER__Praktikum1_unscanned_Debug C$:/Users/jgreive/CLionProjects/Praktikum1/main.c || cmake_object_order_depends_target_Praktikum1
   DEP_FILE = CMakeFiles\Praktikum1.dir\main.c.obj.d
-  FLAGS = -Wall -Wextra -g -std=gnu90 -fdiagnostics-color=always
+  FLAGS = -ansi -pedantic -pedantic-errors -Wall -Wextra -Werror -g -std=gnu90 -fdiagnostics-color=always -Werror
   OBJECT_DIR = CMakeFiles\Praktikum1.dir
   OBJECT_FILE_DIR = CMakeFiles\Praktikum1.dir
 
@@ -64,7 +64,7 @@ build CMakeFiles/Praktikum1.dir/main.c.obj: C_COMPILER__Praktikum1_unscanned_Deb
 # Link the executable Praktikum1.exe
 
 build Praktikum1.exe: C_EXECUTABLE_LINKER__Praktikum1_Debug CMakeFiles/Praktikum1.dir/main.c.obj
-  FLAGS = -Wall -Wextra -g
+  FLAGS = -ansi -pedantic -pedantic-errors -Wall -Wextra -Werror -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Praktikum1.dir
   POST_BUILD = cd .
